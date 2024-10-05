@@ -1,18 +1,22 @@
-
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="style.css">
     <title>Home-site Coffee</title>
-</head>
-<body>
+    <script src="/scripts/main_script.js"></script>
 
+</head>
+
+<body>
     <div class="notification flex center">
-        <p class="notification-text">Delivery within 2 to 5 working days. <a href="./shop.html" style="color:white;">Shop now</a></p>
+        <p class="notification-text">Delivery within 2 to 5 working days. <a href="./shop.html"
+                style="color:white;">Shop now</a></p>
     </div>
     <div class="container">
 
@@ -22,26 +26,106 @@
                     <input type="text" placeholder="Type here..." class="search-input">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
                 </form>
-    
-                <img src="./images/Shaheen-Coffee-English-Logo-Gold-on-Black-background.png" alt="Shaheen Coffee Logo" style="width: 250px;">
-    
+
+                <a href="./index.html"><img src="./images/Shaheen-Coffee-English-Logo-Gold-on-Black-background.png"
+                        alt="Shaheen Coffee Logo" style="width: 250px;"></a>
+
                 <div class="user-info side">
-                    <a href="Login.html"><i class="fa-solid fa-user"></i></a>
-                    <a><i class="fa-solid fa-cart-shopping"></i>0</a>
+                    <a href="#" class="user-icon" id="user-icon"><i class="fa-solid fa-user"
+                            style="font-size: 20px;"></i></a>
+                    <!-- for login and register box -->
+                    <div class="login_box">
+                        <div class="login_content" id="login-content">
+                            <div class="login-register flex">
+                                <div class="box flex center active" id="login-tab">
+                                    <p>LOGIN</p>
+                                </div>
+                                <div class="box flex center" id="register-tab">
+                                    <p>REGISTER</p>
+                                </div>
+                                <div class="line"></div>
+                            </div>               
+                            <div id="login-form">
+                                <div class="form-group">
+                                    <label for="username">Username or email <span>*</span></label>
+                                    <input type="text" id="username" name="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password <span>*</span></label>
+                                    <div class="password-container">
+                                        <input type="password" id="password" name="password">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group checkbox-container">
+                                    <input type="checkbox" id="remember" name="remember">
+                                    <label for="remember">Remember Me</label>
+                                    <a href="#">Lost password?</a>
+                                </div>
+                                <button class="btn">LOG IN</button>
+                            </div>
+                            <div id="register-form" class="hidden">
+                                <div class="form-group">
+                                    <label for="new-username">Username <span>*</span></label>
+                                    <input type="text" id="new-username" name="new-username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-email">Email <span>*</span></label>
+                                    <input type="text" id="new-email" name="new-email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-password">Password <span>*</span></label>
+                                    <div class="password-container">
+                                        <input type="password" id="new-password" name="new-password">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                </div>
+                                <button class="btn">REGISTER</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+                    <a><i class="fa-solid fa-cart-shopping" style="font-size: 20px;"></i>0</a>
                 </div>
             </nav>
+
             <nav class="main_nav">
                 <ul class="flex center">
                     <li><a href="./index.html" class="text current">HOME</a></li>
                     <li><a href="./shop.html" class="text">SHOP</a></li>
                     <li><a href="./Store_location.html" class="text">STORE LOCATIONS</a></li>
                     <li><a href="./about_us.html" class="text">ABOUT US</a></li>
-                    <li><a href="./contect_us.html" class="text">CONTECNT US</a></li>
+                    <li><a href="./contect_us.html" class="text">CONTACT US</a></li>
                     <li><a href="#" class="text">العربي</a></li>
                 </ul>
             </nav>
         </header>
     </div>
-    
+
+    <script>
+        document.getElementById('user-icon').addEventListener('click', function () {
+            var loginContent = document.getElementById('login-content');
+            if (loginContent.style.display === 'none' || loginContent.style.display === '') {
+                loginContent.style.display = 'block';
+            } else {
+                loginContent.style.display = 'none';
+            }
+        });
+
+        document.getElementById('login-tab').addEventListener('click', function () {
+            document.getElementById('login-form').classList.remove('hidden');
+            document.getElementById('register-form').classList.add('hidden');
+            this.classList.add('active');
+            document.getElementById('register-tab').classList.remove('active');
+        });
+
+        document.getElementById('register-tab').addEventListener('click', function () {
+            document.getElementById('register-form').classList.remove('hidden');
+            document.getElementById('login-form').classList.add('hidden');
+            this.classList.add('active');
+            document.getElementById('login-tab').classList.remove('active');
+        });
+    </script>
 </body>
+
 </html>
