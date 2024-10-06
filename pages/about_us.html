@@ -1,11 +1,39 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT US-site Coffee</title>
-</head>
-<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/style.css">
     
+    <title>Home-site Coffee</title>
+    <script src="/scripts/main_script.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!--header loader-->
+        <div id="header_style"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            $(function () {
+                $("#header_style").load("header.html");
+            })
+        </script>
+        <!-- header loader end -->
+
+
+        <div class="contant" style="background-color: red; width: 100%; height: 500px;"></div>
+    </div>
+
+
+
 </body>
+
 </html>
