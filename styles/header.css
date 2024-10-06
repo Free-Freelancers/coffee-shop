@@ -1,0 +1,248 @@
+header{
+  margin-bottom: 50px;
+}
+.notification {
+  padding: 5px 0;
+  width: 100%;
+  background-color: rgb(34, 34, 34);
+  color: white;
+}
+.notification::before {
+  content: '';
+  position: absolute;
+  padding: 13px 0;
+  width: 500000%;
+  top:0;
+  background-color: rgb(34, 34, 34);
+  z-index: -1; 
+}
+.notification-text {
+  font-size: 13px;
+}
+
+.top-column {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search {
+  position: relative;
+}
+
+.search-input {
+  height: 35px;
+  width: 250px;
+  padding: 10px;
+  border-color: rgb(136, 136, 136, 0.5);
+  border-width: 1px;
+  border-style: solid;
+}
+
+.search-icon {
+  font-size: 15px;
+  color: rgba(136, 136, 136, 0.5);
+  position: absolute;
+  left: 330px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.user-info {
+  display: flex;
+  justify-content: center;
+}
+
+.user-info * {
+  padding: 0 3px;
+  position: relative;
+}
+
+.side {
+  padding: 20px;
+  width: 20%;
+}
+
+.login-box {
+  position: absolute;
+  width: 300px;
+  padding: 20px;
+  right: 0px;
+  top: 100px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: block;
+  transition: 0.5s;
+  z-index: 5;
+  animation: hide 1s forwards;
+}
+
+.user-icon:hover + .login-box, .login-box:hover {
+  animation: show 1s forwards;
+  top: 90px;
+}
+
+.login-content {
+  max-width: 260px;
+  margin: auto;
+}
+
+.login-register {
+  display: flex;
+  justify-content: space-between;
+  
+  margin-bottom: 20px;
+}
+.line{
+  position: absolute;
+  width: 95%;
+  height: 1px;
+  background-color: black;
+  top: 24px;
+}
+.login-register .box {
+  cursor: pointer;
+  padding-bottom: 5px;
+  width: 300px;
+  transition: 0.3s;
+}
+
+.login-register .box.active {
+  border-bottom: 2px solid #000;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.form-group .password-container {
+  position: relative;
+}
+
+.form-group .password-container input[type="password"] {
+  padding-right: 30px;
+}
+
+.form-group .password-container .fa-eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.form-group .checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.form-group .checkbox-container input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.form-group .checkbox-container a {
+  margin-left: auto;
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+}
+
+.form-group .checkbox-container a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#register-form, #login-form {
+  opacity: 100%;
+  display: block;
+  visibility: visible;
+  animation: hide 1s ;
+  animation-fill-mode: both;
+}
+
+#register-form.hidden, #login-form.hidden {
+  transition: 0.3s;
+  animation: hide 1s ;
+  animation-fill-mode: both;
+}
+
+.main_nav ul {
+  list-style: none;
+}
+
+.main_nav ul li {
+  padding-inline: 20px;
+}
+
+.main_nav .text {
+  position: relative;
+}
+
+.main_nav .text::after {
+  content: '';
+  background-color: rgb(34, 34, 34);
+  width: 0%;
+  height: 2px;
+  right: 0;
+  bottom: -10px;
+  position: absolute;
+  border-radius: 1px;
+  transition: 0.5s;
+}
+
+.main_nav .text:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.main_nav .current::after {
+  content: '';
+  background-color: rgb(34, 34, 34);
+  width: 100%;
+  height: 2px;
+  right: 0;
+  bottom: -10px;
+  position: absolute;
+  border-radius: 1px;
+  transition: 0.5s;
+}
+
+@keyframes hide {
+  0% {display: block; opacity: 100%;}
+  99% {opacity: 0;}
+  100% {display: none; opacity: 0;}
+}
+
+@keyframes show {
+  0% {display: block; opacity: 0;} 
+  100% {opacity: 100%;}
+}

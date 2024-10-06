@@ -1,0 +1,88 @@
+<!--notification-->
+<div class="notification flex center">
+    <p class="notification-text">Delivery within 2 to 5 working days. <a href="./shop.html"
+            style="color:white;">Shop now</a></p>
+</div>
+<!--Header-->
+<header>
+    <nav class="top-column flex center">
+        <form class="search side">
+            <input type="text" placeholder="Type here..." class="search-input">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </form>
+
+        <a href="./index.html"><img src="./images/logo.png"
+                alt="Shaheen Coffee Logo" style="width: 150px;"></a>
+
+        <div class="user-info side">
+            <a href="#" class="user-icon" id="user-icon"><i class="fa-solid fa-user"
+                    style="font-size: 20px;"></i></a>
+            <!-- for login and register box -->
+            <div class="login-box">
+                <div class="login-content" id="login-content">
+                    <div class="login-register flex">
+                        <div class="box flex center active" id="login-tab">
+                            <p>LOGIN</p>
+                        </div>
+                        <div class="box flex center" id="register-tab">
+                            <p>REGISTER</p>
+                        </div>
+                        <div class="line"></div>
+                    </div>               
+                    <div id="login-form">
+                        <div class="form-group">
+                            <label for="username">Username or email <span>*</span></label>
+                            <input type="text" id="username" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password <span>*</span></label>
+                            <div class="password-container">
+                                <input type="password" id="password" name="password">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="form-group checkbox-container">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Remember Me</label>
+                            <a href="#">Lost password?</a>
+                        </div>
+                        <button class="btn">LOG IN</button>
+                    </div>
+                    <div id="register-form" class="hidden">
+                        <div class="form-group">
+                            <label for="new-username">Username <span>*</span></label>
+                            <input type="text" id="new-username" name="new-username">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-email">Email <span>*</span></label>
+                            <input type="text" id="new-email" name="new-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">Password <span>*</span></label>
+                            <div class="password-container">
+                                <input type="password" id="new-password" name="new-password">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <button class="btn">REGISTER</button>
+                    </div>
+                </div>
+            </div>
+            <!-- -------------------------- -->
+            <a><i class="fa-solid fa-cart-shopping" style="font-size: 20px;"></i>0</a>
+        </div>
+    </nav>
+
+    <nav class="main_nav">
+        <ul class="flex center">
+            <li><a href="./index.html" class="text current">HOME</a></li>
+            <li><a href="./shop.html" class="text">SHOP</a></li>
+            <li><a href="./Store_location.html" class="text">STORE LOCATIONS</a></li>
+            <li><a href="./about_us.html" class="text">ABOUT US</a></li>
+            <li><a href="./contect_us.html" class="text">CONTACT US</a></li>
+            <li><a href="#" class="text">العربي</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script src="./scripts/header.js"> </script>
